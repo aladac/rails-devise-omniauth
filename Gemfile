@@ -72,3 +72,5 @@ gem 'capybara', '~> 3.25', group: :test
 gem 'chromedriver-helper', '~> 2.1', group: :test
 
 gem 'pry', '~> 0.12.2', groups: %i[development test]
+
+gem 'devise-bootstrap-views', '~> 1.1'
