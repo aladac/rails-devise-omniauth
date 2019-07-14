@@ -8,6 +8,7 @@ ruby '2.6.3'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'coffee-rails', '~> 4.2'
 gem 'pg', '~> 1.1'
+gem 'puma', '~> 4.0'
 gem 'rails', '~> 5.2.3'
 gem 'sass-rails', '~> 5.0'
 gem 'sqlite3'
@@ -34,6 +35,7 @@ end
 group :test do
   gem 'capybara', '~> 3.25'
   gem 'chromedriver-helper', '~> 2.1'
+  gem 'codacy-coverage', '~> 2.1'
   gem 'simplecov', '~> 0.17.0', require: false
 end
 
@@ -43,8 +45,5 @@ gem 'omniauth-facebook', '~> 5.0'
 gem 'omniauth-github', '~> 1.3'
 gem 'omniauth-google-oauth2', '~> 0.7.0'
 gem 'omniauth-linkedin', '~> 0.2.0'
-gem 'omniauth-twitter', '~> 1.4'
-
-gem 'puma', '~> 4.0'
-
 gem 'omniauth-rails_csrf_protection', '~> 0.1.2'
+gem 'omniauth-twitter', '~> 1.4'
