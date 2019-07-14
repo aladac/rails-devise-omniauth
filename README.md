@@ -1,24 +1,3 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/dbd04057471944c3a1b11275e451d537)](https://app.codacy.com/app/aladac/rails-devise-omniauth?utm_source=github.com&utm_medium=referral&utm_content=aladac/rails-devise-omniauth&utm_campaign=Badge_Grade_Dashboard)
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
