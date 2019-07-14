@@ -47,3 +47,5 @@ gem 'omniauth-google-oauth2', '~> 0.7.0'
 gem 'omniauth-linkedin', '~> 0.2.0'
 gem 'omniauth-rails_csrf_protection', '~> 0.1.2'
 gem 'omniauth-twitter', '~> 1.4'
+
+gem "selenium-webdriver", "~> 3.142"
