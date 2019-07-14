@@ -1,30 +1,20 @@
 # frozen_string_literal: true
 
 class User::OmniauthCallbacksController < Devise::OmniauthCallbacksController
-  # You should configure your model like this:
-  # devise :omniauthable, omniauth_providers: [:twitter]
+  def github
+    handle_login(:github)
+  end
 
-  # You should also create an action method in this controller like this:
-  # def twitter
-  # end
-  def google
-    @user = User.from_omniauth(request.env['omniauth.auth'])
-    if @user.persisted?
-      sign_in_and_redirect @user, event: :authentication
-      set_flash_message(:notice, :success, kind: 'Google') if is_navigational_format?
-    else
-      redirect_to new_user_registration_url
-    end
+  def twitter
+    handle_login(:twitter)
+  end
+
+  def google_oauth2
+    handle_login(:google_oauth2)
   end
 
   def facebook
-    @user = User.from_omniauth(request.env['omniauth.auth'])
-    if @user.persisted?
-      sign_in_and_redirect @user, event: :authentication
-      set_flash_message(:notice, :success, kind: 'Facebook') if is_navigational_format?
-    else
-      redirect_to new_user_registration_url
-    end
+    handle_login(:facebook)
   end
 
   # More info at:
@@ -46,4 +36,14 @@ class User::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # def after_omniauth_failure_path_for(scope)
   #   super(scope)
   # end
+
+  def handle_login(kind)
+    @user = User.from_omniauth(request.env['omniauth.auth'])
+    if @user.persisted?
+      sign_in_and_redirect @user, event: :authentication
+      set_flash_message(:notice, :success, kind: kind.to_s) if is_navigational_format?
+    else
+      redirect_to new_user_registration_url
+    end
+  end
 end

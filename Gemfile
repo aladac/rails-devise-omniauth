@@ -74,3 +74,5 @@ gem 'chromedriver-helper', '~> 2.1', group: :test
 gem 'pry', '~> 0.12.2', groups: %i[development test]
 
 gem 'devise-bootstrap-views', '~> 1.1'
+
+gem 'omniauth-google-oauth2', '~> 0.7.0'
