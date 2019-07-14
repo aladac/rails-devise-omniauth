@@ -1,0 +1,37 @@
+require: rubocop-rspec
+Rails:
+  Enabled: true
+Metrics/MethodLength:
+  Exclude:
+    - 'lib/generators/**/*'
+Metrics/LineLength:
+  Max: 200
+  Exclude:
+    - 'spec/factories/**/*'
+Metrics/BlockLength:
+  Exclude:
+    - 'config/environments/*'
+    - 'spec/**/*'
+    - 'config/routes.rb'
+Style/ClassAndModuleChildren:
+  Enabled: false
+Lint/NonLocalExitFromIterator:
+  Exclude:
+    - 'app/models/resource.rb'
+    - 'app/controllers/membership_controller.rb'
+Documentation:
+  Enabled: false
+AllCops:
+  Exclude:
+    - 'node_modules/**/*'
+    - 'lib/tasks/cucumber.rake'
+    - 'bin/*'
+    - 'db/migrate/*'
+    - 'db/seeds.rb'
+    - 'db/schema.rb'
+    - 'vendor/bundle/**/*'
+Naming/MethodName:
+  Exclude:
+    - 'app/serializers/*'
+Bundler/DuplicatedGem:
+  Enabled: false

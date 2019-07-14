@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -31,32 +33,42 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
 end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'web-console', '>= 3.3.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
-gem "devise", "~> 4.6"
+gem 'devise', '~> 4.6'
 
-gem "omniauth-facebook", "~> 5.0"
+gem 'omniauth-facebook', '~> 5.0'
 
-gem "omniauth-google", "~> 1.0"
+gem 'omniauth-google', '~> 1.0'
 
-gem "omniauth-twitter", "~> 1.4"
+gem 'omniauth-twitter', '~> 1.4'
 
-gem "rubocop", "~> 0.72.0", :group => :development
+gem 'rubocop', '~> 0.72.0', group: :development
 
-gem "simplecov", "~> 0.17.0", :group => :test
+gem 'simplecov', '~> 0.17.0', group: :test
 
-gem "passenger", "~> 6.0"
+gem 'passenger', '~> 6.0'
+
+gem 'omniauth-github', '~> 1.3'
+
+gem 'rubocop-rspec', '~> 1.33', group: :development
+
+gem 'rspec-rails', '~> 3.8', groups: %i[development test]
+
+gem 'capybara', '~> 3.25', group: :test
+gem 'chromedriver-helper', '~> 2.1', group: :test
+
+gem 'pry', '~> 0.12.2', groups: %i[development test]

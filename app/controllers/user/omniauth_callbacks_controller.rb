@@ -8,6 +8,14 @@ class User::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # def twitter
   # end
 
+  def google
+    binding.pry
+  end
+
+  def facebook
+    binding.pry
+  end
+
   # More info at:
   # https://github.com/plataformatec/devise#omniauth
 
