@@ -47,4 +47,4 @@ gem 'omniauth-twitter', '~> 1.4'
 
 gem 'puma', '~> 4.0'
 
-gem "omniauth-rails_csrf_protection", "~> 0.1.2"
+gem 'omniauth-rails_csrf_protection', '~> 0.1.2'
