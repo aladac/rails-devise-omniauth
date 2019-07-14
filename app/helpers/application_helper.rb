@@ -3,11 +3,12 @@
 module ApplicationHelper
   def provider_icon(name)
     data = {
-      twitter: { name: 'Twitter', icon: 'fab fa-twitter' },
-      google_oauth2: { name: 'Google', icon: 'fab fa-google' },
-      github: { name: 'GitHub', icon: 'fab fa-github' },
-      facebook: { name: 'Facebook', icon: 'fab fa-facebook' }
+      twitter: 'fab fa-twitter',
+      google_oauth2: 'fab fa-google',
+      github: 'fab fa-github',
+      facebook: 'fab fa-facebook',
+      linkedin: 'fab fa-linkedin'
     }
-    content_tag(:i, '', class: data[name][:icon])
+    content_tag(:i, '', class: data[name])
   end
 end

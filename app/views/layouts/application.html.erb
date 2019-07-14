@@ -1,24 +1,12 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>><%= yield(:title) || 'rails-devise-omniauth' %></title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/cover/">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="https://getbootstrap.com/docs/4.0/examples/cover/cover.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" />
+    <%= render partial: 'head' %>
   </head>
 
-  <body class="text-center">
+  <body>
 
-    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+    <div class="d-flex h-100 p-3 mx-auto flex-column">
       <%= render(partial: 'navbar') unless devise_controller? %>
       <main role="main" class="inner cover">
         <%= yield %>
@@ -26,7 +14,7 @@
 
       <footer class="mastfoot mt-auto">
         <div class="inner">
-          <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+          <!-- <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p> -->
         </div>
       </footer>
     </div>

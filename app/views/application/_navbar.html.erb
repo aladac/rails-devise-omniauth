@@ -1,11 +1,17 @@
-<header class="masthead mb-auto">
-  <div class="inner">
-    <h3 class="masthead-brand">Cover</h3>
-    <nav class="nav nav-masthead justify-content-center">
-      <a class="nav-link active" href="#">Home</a>
-      <a class="nav-link" href="#">Features</a>
-      <a class="nav-link" href="#">Contact</a>
-      <%= link_to 'Signout', destroy_user_session_path, class: 'nav-link', method: :delete %>
-    </nav>
-  </div>
+<header class="mb-auto justify-content-between navbar">
+  <nav class="nav mr-auto">
+    <a class="nav-link active" href="#">Home</a>
+    <a class="nav-link" href="#">Features</a>
+    <a class="nav-link" href="#">Contact</a>
+  </nav>
+  <nav class="nav">
+    <span class="navbar-image mr-3">
+      <%= image_tag(current_user.image, class: 'rounded-circle mt-2', style: 'max-height: 24px') if current_user.image %>
+    </span>
+    <span class="navbar-text mr-3">
+      <%= provider_icon current_user.provider.to_sym %>
+    </span>
+    <%= content_tag :span, current_user.name, class: 'navbar-text' %>
+    <%= link_to 'Signout', destroy_user_session_path, class: 'nav-link', method: :delete %>
+  </nav>
 </header>
