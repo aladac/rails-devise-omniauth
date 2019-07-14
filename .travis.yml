@@ -1,6 +1,8 @@
 language: ruby
 rvm:
   - 2.6.3
+before_script:
+  - bundle exec rails db:setup
 script:
   - bundle exec rake
 services:
