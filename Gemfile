@@ -40,7 +40,7 @@ group :test do
   gem 'simplecov', '~> 0.17.0', require: false
 end
 
-gem 'devise', '~> 4.6'
+gem 'devise', '~> 4.7'
 
 gem 'omniauth-facebook', '~> 5.0'
 gem 'omniauth-github', '~> 1.3'
