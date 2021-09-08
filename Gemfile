@@ -16,7 +16,7 @@ gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
-  gem 'better_errors', '~> 2.5'
+  gem 'better_errors', '~> 2.8'
   gem 'binding_of_caller', '~> 0.8.0'
   gem 'pry', '~> 0.12.2'
   gem 'rspec-rails', '~> 3.8'
